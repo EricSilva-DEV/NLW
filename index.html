@@ -8,6 +8,12 @@
 
     <!-- ICONS -->
     <link rel="stylesheet" href="assets/icomoon/style.css">
+
+    <!-- SWIPER-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
    
    
     <!-- STYLES -->
@@ -127,12 +133,13 @@
             <div class="divider-1"></div>
             <!-- TESTIMONIALS -->
             <section class="section" id="testimonials">
-                <div class="container grid">
+                <div class="container">
                     <header">
                         <h2 class="title">Depoimentos de quem já passou por aqui</h2>
-                        <div class="testimonials">
-            <!-- DEPOIMENTO 1-->
-                            <div class="testemonials">
+                        <div class="testimonials swiper">
+                        <div class="swiper-wrapper">
+             <!-- DEPOIMENTO 1-->
+                            <div class="testemonials swiper-slide">
                                 <blockquote>
                                     <p>
                                         <span>&ldquo;</span>
@@ -147,7 +154,7 @@
                             </div>
 
             <!-- DEPOIMENTO 2-->
-                            <div class="testimonials">
+                            <div class="testimonials swiper-slide">
                                 <blockquote>
                                     <p>
                                         <span>&ldquo;</span>
@@ -162,7 +169,7 @@
                             </div>
 
             <!-- DEPOIMENTO 3-->
-                            <div class="testimonials">
+                            <div class="testimonials swiper-slide">
                                 <blockquote>
                                     <p>
                                         <span>&ldquo;</span>
@@ -175,18 +182,49 @@
                                 </blockquote>
                                 
                             </div>
+                        </div>
 
-                            
+                             <!-- PAGINAÇÂO -->
+                             <div class="swiper-pagination"></div>
                         </div>
                     </header>
                 </div>
             </section>
 
-
+            <div class="divider-2"></div>
 
             <!-- CONTACT -->
-        </main>
+            <section class="section" id="contact">
+                <div class="container grid">
 
+                    <div class="text">
+                        <h2 class="title">Entre em contato com a gente!</h2>
+                        <p>Entre em contato com a Beautysalon, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+                        <a href="https://api.whatsapp.com/send?phone=+5511998456754&text=Olá, gostaria de agendar um serviço" class="button" 
+                        target="_blank"
+                        ><i class="icon-whatsapp"></i>Entrar em contato</a>
+                    </div>
+
+                    <div class="links">
+                        <ul class="grid">
+                            <li><i class="icon-phone"></i>11 99845-6754</li>
+                            <li><i class="icon-map-pin"></i>Rua Amauri Souza 346</li>
+                            <li><i class="icon-mail"></i>contato@Beautysalon.com</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </main>
+            <!-- SWIPER -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+            <!-- SCROLL-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+                
+            <!-- MAIN.JS -->
         <script src="main.js"></script>
 
     </body>
