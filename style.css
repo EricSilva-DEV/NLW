@@ -35,6 +35,12 @@ ul {
     --text-color-light: hsl(0 0% 98%);
     --body-color: hsl(0 0% 98%);
 
+    /* Fonts */
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1rem;
+
+    --title-font: 'Poppins', sans-serif;
+    --body-font: 'DM Sans', sans-serif;
 }
 
 /* ==================  base ============================= */
@@ -44,14 +50,14 @@ html {
 
 
 body{
-    font: 400 1rem 'Dm Sans', sans-serif;
+    font: 400 1rem var(--body-font);
     color: var(--text-color);
     background: var(--body-color);
     -webkit-font-smoothing: antialiased;
 }
 
 .title {
-    font: 700 1.875rem 'Poppins', sans-serif;
+    font: 700 var(--title-font-size) var(--title-font);
     color: var(--text-color);
     -webkit-font-smoothing: auto;
 }
@@ -64,7 +70,7 @@ body{
     align-items: center;
     padding: 0 2rem;
     border-radius: 0.25rem;
-    font: 500 1rem 'DM Sans', sans-serif;
+    font: 500 1rem var(--body-font);
     transform: background 0.3s;
 }
 
@@ -104,11 +110,15 @@ body{
 }
 
 .section {
-    padding: 5rem 0;
+    padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
     padding: 1rem;
+}
+
+.section .subtitle {
+    font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -146,11 +156,6 @@ body{
 #header.scroll .icon-menu {
     color: white;
     transition: 0.5s;
-}
-
-
-main {
-    margin-top: calc(var(--header-height) + 2rem);
 }
 
 
@@ -489,6 +494,10 @@ footer {
     background: var(--base-color);
 }
 
+footer.section {
+    padding: 4rem 0;
+}
+
 .logo-alt span {
     color: var(--body-color);
 }
@@ -509,8 +518,12 @@ footer .social i {
     font-size: 1.5rem;
 }
 
+footer .social {
+    grid-auto-flow: column;
+    width: fit-content;
+}
+
 footer .social a {
-    margin-right: 2rem;
     transition: 0.3s;
     display: inline-block;
 
@@ -547,3 +560,141 @@ footer .social a:hover {
     opacity: 1;
     transform: translateY(0%);
 }
+
+/* ================== Media Queries ============================= */
+/* extra large devices: 1200 > */
+@media (min-width: 1200px) {
+  /* reusable classes */
+
+    .container {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+    padding: 10rem 0;
+   }
+
+   .section header,
+   #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+   .butoon {
+    height: 3.125rem;
+   }
+  
+   /* navigation */
+
+   nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    
+   }
+
+   nav .menu ul {
+    display: flex;
+    gap: 2rem;
+   }
+
+   nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+
+   }
+
+   nav .icon-menu {
+    display: none;
+   }
+
+   /* Layout */
+
+   main {
+    margin-top: var(--header-height);
+}
+
+    /* Home */
+
+   #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+
+   }
+
+   #home .image {
+    order: 1;
+   }
+
+   #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+   }
+
+   /* About */
+   #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+
+   }
+
+    /* services */
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+
+   /* testimonials */
+   #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   }
+
+   /* contact */
+   #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+   }
+
+   #contact .text {
+    max-width: 25rem;
+   }
+
+   /* Footer */
+   footer.section {
+    padding: 3.75rem 0;
+   }
+
+   footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+   }
+
+   footer .logo {
+    font-size: 2.25rem;
+   }
+
+}
+/* extra large devices: 1023 > */
+/* extra large devices: 992 > */
+@media (min-width: 992px) {
+    :root {
+        --title-font-size: 2.25rem;
+        --subtitle-font-size: 1.125rem;
+    }
+    
+}
+
+/* extra large devices: 767 > */
