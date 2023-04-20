@@ -62,7 +62,7 @@ const swiper = new Swiper('.swiper', {
 /* Botão de TOPO */
 const backToTopButton = document.querySelector('.back-to-top')
 window.addEventListener('scroll', function () {
-    if(window.scrolly >= 560) {
+    if(window.scrollY >= 560) {
         backToTopButton.classList.add('show')
     } else {
         backToTopButton.classList.remove('show')
